@@ -15,7 +15,7 @@ from farm.data_handler.data_silo import DataSilo
 from farm.modeling.language_model import LanguageModel
 from farm.modeling.prediction_head import PredictionHead, TextSimilarityHead
 from farm.modeling.tokenization import Tokenizer
-from farm.utils import MLFlowLogger as MlLogger, stack
+from farm.utils import WANDBLogger as MlLogger, stack
 
 logger = logging.getLogger(__name__)
 

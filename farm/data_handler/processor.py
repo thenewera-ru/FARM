@@ -49,7 +49,7 @@ from farm.modeling.tokenization import (
     tokenize_batch_question_answering,
     _get_start_of_word
 )
-from farm.utils import MLFlowLogger as MlLogger
+from farm.utils import WANDBLogger as MlLogger
 from farm.utils import try_get
 
 ID_NAMES = ["example_id", "external_id", "doc_id", "id"]

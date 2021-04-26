@@ -22,7 +22,7 @@ except ImportError:
     AMP_AVAILABLE = False
     APEX_PARALLEL_AVAILABLE = False
 
-from farm.utils import MLFlowLogger as MlLogger
+from farm.utils import WANDBLogger as MlLogger
 
 logger = logging.getLogger(__name__)
 

@@ -7,7 +7,7 @@ from torch.utils.data import DataLoader
 
 from farm.evaluation.metrics import compute_metrics, compute_report_metrics
 from farm.utils import to_numpy
-from farm.utils import MLFlowLogger as MlLogger
+from farm.utils import WANDBLogger as MlLogger
 from farm.modeling.adaptive_model import AdaptiveModel
 from farm.modeling.biadaptive_model import BiAdaptiveModel
 from farm.visual.ascii.images import BUSH_SEP

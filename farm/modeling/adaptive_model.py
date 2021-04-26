@@ -15,7 +15,7 @@ from transformers.convert_graph_to_onnx import convert, quantize as quantize_mod
 from farm.data_handler.processor import Processor
 from farm.modeling.language_model import LanguageModel
 from farm.modeling.prediction_head import PredictionHead, pick_single_fn
-from farm.utils import MLFlowLogger as MlLogger, stack
+from farm.utils import WANDBLogger as MlLogger, stack
 import farm.conversion.transformers as conv
 
 logger = logging.getLogger(__name__)

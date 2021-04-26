@@ -15,7 +15,7 @@ from farm.data_handler.utils import grouper
 from farm.data_handler.inputs import QAInput
 from farm.modeling.adaptive_model import AdaptiveModel, BaseAdaptiveModel, ONNXAdaptiveModel
 from farm.modeling.optimization import optimize_model
-from farm.utils import initialize_device_settings, MLFlowLogger
+from farm.utils import initialize_device_settings, WANDBLogger
 from farm.utils import set_all_seeds, calc_chunksize, log_ascii_workers, Benchmarker
 from farm.modeling.predictions import QAPred
 
@@ -108,7 +108,7 @@ class Inferencer:
         :return: An instance of the Inferencer.
 
         """
-        MLFlowLogger.disable()
+        WANDBLogger.disable()
 
         # For benchmarking
         if dummy_ph:
