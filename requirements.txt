@@ -4,7 +4,8 @@ wheel
 # PyTorch
 # Temp. disabled the next line as it gets currently resolved to https://download.pytorch.org/whl/rocm3.8/torch-1.7.1%2Brocm3.8-cp38-cp38-linux_x86_64.whl
 #--find-links=https://download.pytorch.org/whl/torch_stable.html
-torch>1.5,<1.8
+torch==1.8.1
+sentencepiece
 # progress bars in model download and training scripts
 tqdm
 # Accessing files from S3 directly.
@@ -19,7 +20,7 @@ seqeval
 mlflow<=1.13.1
 wandb==0.10.14
 # huggingface repository
-transformers==4.1.1
+transformers
 # accessing dictionary elements with dot notation
 dotmap
 # for inference-rest-apis
