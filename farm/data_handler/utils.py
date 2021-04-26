@@ -218,11 +218,11 @@ def read_dpr_json(file, max_samples=None, proxies=None, num_hard_negatives=1, nu
 
     if file.suffix.lower() == ".jsonl":
         dicts = []
-        with open(file, encoding='utf-8') as f:
+        with open(file, encoding='utf-8-sig') as f:
             for line in f:
                 dicts.append(json.loads(line))
     else:
-        dicts = json.load(open(file, encoding='utf-8'))
+        dicts = json.load(open(file, encoding='utf-8-sig'))
 
     if max_samples:
         dicts = random.sample(dicts, min(max_samples, len(dicts)))
