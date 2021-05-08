@@ -398,10 +398,9 @@ class BiAdaptiveModel(nn.Module, BaseBiAdaptiveModel):
         """
         pooled_output = [None, None]
         if "query_input_ids" in kwargs.keys():
-            if self.language_model1.get_language_model_class(self.language_model1.name) == 'DistilBert':
-                pooled_output1, hidden_states1 = self.language_model1(input_ids=kwargs['query_input_ids'], padding_mask=kwargs['query_attention_mask'])
-            else:
-                pooled_output1, hidden_states1 = self.language_model1(**kwargs)
+#           if self.language_model1.get_language_model_class(self.language_model1.name) == 'DistilBert':
+#               pooled_output1, hidden_states1 = self.language_model1(input_ids=kwargs['query_input_ids'], padding_mask=kwargs['query_attention_mask']
+            pooled_output1, hidden_states1 = self.language_model1(**kwargs)
             pooled_output[0] = pooled_output1
         if "passage_input_ids" in kwargs.keys():
             pooled_output2, hidden_states2 = self.language_model2(**kwargs)
