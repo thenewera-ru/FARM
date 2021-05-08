@@ -214,7 +214,7 @@ class BiAdaptiveModel(nn.Module, BaseBiAdaptiveModel):
             loss_aggregation_fn = loss_per_head_sum
         self.loss_aggregation_fn = loss_aggregation_fn
 
-    def save(self, save_dir, lm1_name="lm1", lm2_name="lm2"):
+    def save(self, save_dir, lm1_name="query", lm2_name="passage"):
         """
         Saves the 2 language model weights and respective config_files in directories lm1 and lm2 within save_dir.
 
@@ -233,7 +233,7 @@ class BiAdaptiveModel(nn.Module, BaseBiAdaptiveModel):
             ph.save(save_dir, i)
 
     @classmethod
-    def load(cls, load_dir, device, strict=False, lm1_name="lm1", lm2_name="lm2", processor=None):
+    def load(cls, load_dir, device, strict=False, lm1_name="query", lm2_name="passage", processor=None):
         """
         Loads a BiAdaptiveModel from a directory. The directory must contain:
 
